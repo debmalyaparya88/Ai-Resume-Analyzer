@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analyze Resume | AI Resume Analyzer</title>
+    <link rel="stylesheet" href="/analyze.css" />
+  </head>
+  <body>
+    <main class="analyze-container">
+      <section class="hero">
+        <h1>AI Resume Analysis</h1>
+
+        <p>
+          Upload your resume and let AI analyze your resume, calculate your ATS
+          score, identify missing skills, compare it with your selected job
+          role, and provide personalized suggestions to improve your chances of
+          getting shortlisted.
+        </p>
+      </section>
+
+      <section class="upload-card">
+        <h2>Upload Resume</h2>
+
+        <form action="/analyze" method="POST" enctype="multipart/form-data">
+          <!-- Resume Upload -->
+
+          <div class="input-group">
+            <label>Upload Resume</label>
+
+            <input
+              type="file"
+              name="resume"
+              accept=".pdf,.doc,.docx"
+              required
+            />
+          </div>
+
+          <!-- Job Roles -->
+
+          <div class="input-group">
+            <label>Select Target Job Role(s)</label>
+
+            <select name="jobRoles" multiple size="12">
+              <option value="Frontend Developer">Frontend Developer</option>
+
+              <option value="Backend Developer">Backend Developer</option>
+
+              <option value="Full Stack Developer">Full Stack Developer</option>
+
+              <option value="MERN Stack Developer">MERN Stack Developer</option>
+
+              <option value="PERN Stack Developer">PERN Stack Developer</option>
+
+              <option value="React Developer">React Developer</option>
+
+              <option value="Node.js Developer">Node.js Developer</option>
+
+              <option value="Python Developer">Python Developer</option>
+
+              <option value="Java Developer">Java Developer</option>
+
+              <option value="Software Engineer">Software Engineer</option>
+
+              <option value="Software Development Engineer (SDE)">
+                Software Development Engineer (SDE)
+              </option>
+
+              <option value="AI Engineer">AI Engineer</option>
+
+              <option value="Generative AI Engineer">
+                Generative AI Engineer
+              </option>
+
+              <option value="Machine Learning Engineer">
+                Machine Learning Engineer
+              </option>
+
+              <option value="Deep Learning Engineer">
+                Deep Learning Engineer
+              </option>
+
+              <option value="Data Scientist">Data Scientist</option>
+
+              <option value="Data Analyst">Data Analyst</option>
+
+              <option value="DevOps Engineer">DevOps Engineer</option>
+
+              <option value="Cloud Engineer">Cloud Engineer</option>
+
+              <option value="Cyber Security Engineer">
+                Cyber Security Engineer
+              </option>
+
+              <option value="Android Developer">Android Developer</option>
+
+              <option value="Flutter Developer">Flutter Developer</option>
+
+              <option value="UI/UX Designer">UI/UX Designer</option>
+
+              <option value="QA Engineer">QA Engineer</option>
+            </select>
+
+            <small>
+              Hold <b>Ctrl</b> (Windows/Linux) or <b>⌘ Command</b> (Mac) to
+              select multiple job roles.
+            </small>
+          </div>
+
+          <!-- Experience -->
+
+          <div class="input-group">
+            <label>Years of Experience</label>
+
+            <select name="experience">
+              <option value="">Select Experience</option>
+
+              <option value="Fresher">Fresher</option>
+
+              <option value="0-1 Years">0 - 1 Years</option>
+
+              <option value="1-3 Years">1 - 3 Years</option>
+
+              <option value="3-5 Years">3 - 5 Years</option>
+
+              <option value="5+ Years">5+ Years</option>
+            </select>
+          </div>
+
+          <!-- Job Description -->
+
+          <div class="input-group">
+            <label>Custom Job Description (Optional)</label>
+
+            <textarea
+              name="jobDescription"
+              rows="8"
+              placeholder="Paste a company's job description here to compare your resume with the actual job requirements..."
+            ></textarea>
+          </div>
+
+          <button type="submit">🚀 Analyze Resume</button>
+        </form>
+      </section>
+
+      <section class="info">
+        <h2>Analysis Report Includes</h2>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>📊 ATS Score</h3>
+            <p>Check how ATS-friendly your resume is.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>🤖 AI Resume Review</h3>
+            <p>Detailed AI-powered feedback on your resume.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>💡 Improvement Suggestions</h3>
+            <p>Get suggestions to improve wording, formatting and content.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>🛠 Missing Skills</h3>
+            <p>Identify missing technical and soft skills.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Job Match Score</h3>
+            <p>Compare your resume with selected job roles.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>📈 Resume Strength</h3>
+            <p>Know your strengths and weak areas.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>📚 Project Evaluation</h3>
+            <p>AI checks whether your projects are relevant.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>📝 Resume Summary</h3>
+            <p>Receive a concise professional summary of your resume.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>⭐ Overall Rating</h3>
+            <p>Overall quality score with recommendations.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="buttons">
+        <a href="/">
+          <button type="button">🏠 Home</button>
+        </a>
+
+        <a href="/dashboard">
+          <button type="button">📊 Dashboard</button>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>

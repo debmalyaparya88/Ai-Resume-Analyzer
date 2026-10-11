@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Assistant</title>
+
+    <link rel="stylesheet" href="/font.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>🤖 AI Career Assistant</h1>
+
+    <nav>
+
+        <% if (isLoggedIn) { %>
+
+            <a href="/">Home</a> |
+            <a href="/dashboard">Dashboard</a> |
+            <a href="/analyze">Analyze Resume</a> |
+            <a href="/my-resumes">My Resumes</a> |
+            <a href="/interview-questions">Interview Questions</a> |
+            <a href="/mock-interview">Mock Interview</a> |
+            <a href="/career">Career Recommendation</a> |
+            <a href="/chatbot">AI Chatbot</a> |
+
+            <form action="/logout" method="POST" style="display:inline;">
+                <button type="submit">Logout</button>
+            </form>
+
+        <% } else { %>
+
+            <a href="/">Home</a> |
+            <a href="/about">About</a> |
+            <a href="/features">Features</a> |
+            <a href="/login">Login</a> |
+            <a href="/signup">Sign Up</a>
+
+        <% } %>
+
+    </nav>
+
+    <hr>
+
+</header>
+
+<main>
+
+    <section class="hero">
+
+        <h2>🚀 Welcome to AI Career Assistant</h2>
+
+        <p>
+
+            AI Career Assistant helps you build a stronger resume,
+            prepare for interviews, discover the best career path,
+            and improve your chances of getting hired using
+            Google's Gemini AI.
+
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>✨ Features</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>📄 Resume Analyzer</h3>
+                <p>
+                    Upload your resume and receive an AI-powered analysis.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📊 ATS Score</h3>
+                <p>
+                    Check how ATS-friendly your resume is.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>💡 Resume Suggestions</h3>
+                <p>
+                    Get personalized suggestions to improve your resume.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🛠 Missing Skills</h3>
+                <p>
+                    Discover technical and soft skills you should add.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>💻 AI Interview Questions</h3>
+                <p>
+                    Generate interview questions based on your resume.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎤 AI Mock Interview</h3>
+                <p>
+                    Practice interviews with AI and receive feedback.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎯 Career Recommendation</h3>
+                <p>
+                    Find the most suitable career path using AI.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🤖 AI Career Chatbot</h3>
+                <p>
+                    Ask career questions and get personalized guidance.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📚 Resume History</h3>
+                <p>
+                    View all your previous resume analyses anytime.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>🌟 Why Choose AI Career Assistant?</h2>
+
+        <ul>
+
+            <li>✔ AI-powered Resume Analysis</li>
+
+            <li>✔ ATS Score Calculation</li>
+
+            <li>✔ Personalized Resume Feedback</li>
+
+            <li>✔ Missing Skills Detection</li>
+
+            <li>✔ AI Interview Question Generator</li>
+
+            <li>✔ Interactive Mock Interview</li>
+
+            <li>✔ Career Recommendation Engine</li>
+
+            <li>✔ AI Career Chat Assistant</li>
+
+            <li>✔ Resume History Dashboard</li>
+
+            <li>✔ Secure Login & Authentication</li>
+
+        </ul>
+
+    </section>
+
+    <br>
+
+    <div class="buttons">
+
+        <% if (isLoggedIn) { %>
+
+            <a href="/analyze">
+                <button>📄 Analyze Resume</button>
+            </a>
+
+            <a href="/dashboard">
+                <button>📊 Dashboard</button>
+            </a>
+
+            <a href="/interview-questions">
+                <button>💻 Interview Questions</button>
+            </a>
+
+            <a href="/mock-interview">
+                <button>🎤 Mock Interview</button>
+            </a>
+
+            <a href="/career">
+                <button>🎯 Career Recommendation</button>
+            </a>
+
+            <a href="/chatbot">
+                <button>🤖 AI Chatbot</button>
+            </a>
+
+        <% } else { %>
+
+            <a href="/signup">
+                <button>Create Account</button>
+            </a>
+
+            <a href="/login">
+                <button>Login</button>
+            </a>
+
+        <% } %>
+
+    </div>
+
+</main>
+
+<hr>
+
+<footer>
+
+    <p>
+
+        © 2026 AI Career Assistant | AI Resume Analyzer |
+        Built using Node.js, Express.js, MongoDB & Google Gemini AI
+
+    </p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis Result</title>
+    <link rel="stylesheet" href="/result.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🤖 AI Resume Analysis Report</h1>
+
+    <div class="score-container">
+
+        <div class="card score">
+            <h2>ATS Score</h2>
+            <h1><%= analysis.atsScore %>%</h1>
+        </div>
+
+        <div class="card score">
+            <h2>Job Match</h2>
+            <h1><%= analysis.jobMatch %>%</h1>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>📝 Resume Summary</h2>
+
+        <p><%= analysis.summary %></p>
+
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h2>💪 Strengths</h2>
+
+            <ul>
+
+                <% analysis.strengths.forEach(item=>{ %>
+
+                    <li><%= item %></li>
+
+                <% }) %>
+
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h2>⚠️ Weaknesses</h2>
+
+            <ul>
+
+                <% analysis.weaknesses.forEach(item=>{ %>
+
+                    <li><%= item %></li>
+
+                <% }) %>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>❌ Missing Skills</h2>
+
+        <div class="skills">
+
+            <% analysis.missingSkills.forEach(skill=>{ %>
+
+                <span class="skill"><%= skill %></span>
+
+            <% }) %>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>💡 Suggestions</h2>
+
+        <ol>
+
+            <% analysis.suggestions.forEach(item=>{ %>
+
+                <li><%= item %></li>
+
+            <% }) %>
+
+        </ol>
+
+    </div>
+
+    <div class="buttons">
+
+        <a href="/analyze">
+            <button>Analyze Another Resume</button>
+        </a>
+        <a href="/interview-questions">
+        <button>💻 Generate Interview Questions</button>
+    </a>
+
+        <a href="/dashboard">
+            <button>Dashboard</button>
+        </a>
+
+        <a href="/">
+            <button>Home</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

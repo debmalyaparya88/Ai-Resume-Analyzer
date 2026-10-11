@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#eef2ff,#dbeafe);
+    min-height:100vh;
+    color:#333;
+}
+
+.container{
+    max-width:1200px;
+    margin:40px auto;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    color:#2563eb;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#555;
+    margin-bottom:35px;
+    font-size:18px;
+}
+
+.card{
+    background:#fff;
+    border-radius:15px;
+    padding:30px;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#2563eb;
+    margin-bottom:20px;
+    border-bottom:2px solid #2563eb;
+    padding-bottom:10px;
+}
+
+.card ol{
+    padding-left:25px;
+}
+
+.card li{
+    margin-bottom:18px;
+    line-height:1.8;
+    color:#444;
+}
+
+.card li p{
+    margin-top:5px;
+}
+
+.tips{
+    background:#ffffff;
+    border-radius:15px;
+    padding:30px;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.tips h2{
+    color:#16a34a;
+    margin-bottom:20px;
+}
+
+.tips ul{
+    padding-left:20px;
+}
+
+.tips li{
+    margin-bottom:12px;
+    line-height:1.7;
+}
+
+/* Buttons */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+
+.buttons a{
+    text-decoration:none;
+}
+
+.buttons button{
+    padding:14px 28px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.buttons button:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+.start{
+    background:#16a34a !important;
+}
+
+.start:hover{
+    background:#15803d !important;
+}
+
+/* Question Number */
+
+.card strong{
+    color:#111827;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .container{
+        padding:15px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    .subtitle{
+        font-size:16px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .buttons button{
+        width:260px;
+    }
+
+}

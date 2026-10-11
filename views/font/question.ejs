@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview Questions</title>
+    <link rel="stylesheet" href="/interview-question.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🤖 AI Generated Interview Questions</h1>
+
+    <p class="subtitle">
+        These interview questions are generated based on your resume analysis and selected job role.
+    </p>
+
+    <% if (!interview) { %>
+
+        <!-- FORM: shown when no interview data yet -->
+        <div class="card">
+            <form action="/interview-questions" method="POST">
+                <label>Pick a past resume analysis (optional):</label>
+                <select name="analysisId">
+                    <option value="">-- Enter details manually instead --</option>
+                    <% analyses.forEach(a => { %>
+                        <option value="<%= a._id %>"><%= a.jobRoles.join(', ') %> (<%= a.createdAt.toDateString() %>)</option>
+                    <% }) %>
+                </select>
+
+                <hr>
+                <label>Job Role</label>
+                <input type="text" name="jobRole" placeholder="e.g. Frontend Developer">
+
+                <label>Experience</label>
+                <input type="text" name="experience" placeholder="e.g. 2 years">
+
+                <label>Job Description (optional)</label>
+                <textarea name="jobDescription"></textarea>
+
+                <button type="submit">Generate Questions</button>
+            </form>
+        </div>
+
+    <% } else { %>
+
+        <!-- Technical Questions -->
+        <div class="card">
+            <h2>💻 Technical Questions</h2>
+            <ol>
+                <% interview.technical.forEach((question,index)=>{ %>
+                    <li>
+                        <strong>Question <%= index + 1 %></strong>
+                        <p><%= question %></p>
+                    </li>
+                <% }) %>
+            </ol>
+        </div>
+
+        <!-- Project Questions -->
+        <div class="card">
+            <h2>🚀 Project Questions</h2>
+            <ol>
+                <% interview.projects.forEach((question,index)=>{ %>
+                    <li>
+                        <strong>Question <%= index + 1 %></strong>
+                        <p><%= question %></p>
+                    </li>
+                <% }) %>
+            </ol>
+        </div>
+
+        <!-- HR Questions -->
+        <div class="card">
+            <h2>👨‍💼 HR Questions</h2>
+            <ol>
+                <% interview.hr.forEach((question,index)=>{ %>
+                    <li>
+                        <strong>Question <%= index + 1 %></strong>
+                        <p><%= question %></p>
+                    </li>
+                <% }) %>
+            </ol>
+        </div>
+
+        <!-- Tips -->
+        <div class="card">
+            <h2>⭐ Interview Tips</h2>
+            <ul>
+                <% interview.tips.forEach(tip => { %>
+                    <li><%= tip %></li>
+                <% }) %>
+            </ul>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <a href="/mock-interview"><button class="start">🎤 Start Mock Interview</button></a>
+            <a href="/career"><button>🎯 Career Recommendation</button></a>
+            <a href="/dashboard"><button>📊 Dashboard</button></a>
+            <a href="/analyze"><button>📄 Analyze Another Resume</button></a>
+            <a href="/"><button>🏠 Home</button></a>
+        </div>
+
+    <% } %>
+
+</div>
+
+</body>
+</html>

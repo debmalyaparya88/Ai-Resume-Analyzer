@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Questions</title>
+    <link rel="stylesheet" href="/interview-result.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🤖 AI Generated Interview Questions</h1>
+
+    <p class="subtitle">
+        These interview questions are generated based on your resume and selected job role.
+    </p>
+
+    <!-- Technical Questions -->
+    <div class="card">
+        <h2>💻 Technical Questions</h2>
+
+        <ol>
+            <% interview.technical.forEach((question,index)=>{ %>
+
+                <li>
+                    <strong>Question <%= index+1 %>:</strong>
+                    <p><%= question %></p>
+                </li>
+
+            <% }) %>
+        </ol>
+    </div>
+
+    <!-- Project Questions -->
+    <div class="card">
+        <h2>🚀 Project Based Questions</h2>
+
+        <ol>
+            <% interview.projects.forEach((question,index)=>{ %>
+
+                <li>
+                    <strong>Question <%= index+1 %>:</strong>
+                    <p><%= question %></p>
+                </li>
+
+            <% }) %>
+        </ol>
+    </div>
+
+    <!-- HR Questions -->
+    <div class="card">
+        <h2>👨‍💼 HR Interview Questions</h2>
+
+        <ol>
+            <% interview.hr.forEach((question,index)=>{ %>
+
+                <li>
+                    <strong>Question <%= index+1 %>:</strong>
+                    <p><%= question %></p>
+                </li>
+
+            <% }) %>
+        </ol>
+    </div>
+
+    <!-- Tips -->
+    <div class="card">
+
+        <h2>⭐ Interview Tips</h2>
+
+        <ul>
+            <li>Understand every project on your resume.</li>
+            <li>Practice explaining your projects clearly.</li>
+            <li>Revise your technical concepts.</li>
+            <li>Prepare STAR method answers for HR questions.</li>
+            <li>Maintain confidence and good communication.</li>
+        </ul>
+
+    </div>
+
+    <div class="buttons">
+
+        <a href="/mock-interview">
+            <button>🎤 Start Mock Interview</button>
+        </a>
+
+        <a href="/career">
+            <button>🎯 Career Recommendation</button>
+        </a>
+
+        <a href="/dashboard">
+            <button>📊 Dashboard</button>
+        </a>
+
+        <a href="/">
+            <button>🏠 Home</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
